@@ -113,7 +113,7 @@ The Tableau dashboard includes:
    2. The _two_ **Bar Charts** showing age groups and gender contributions
    3. A **Line Chart** comparing total product category profits per month.
    4. A **Pie Chart** showing the highest detailed revenue of Category and its sub-category (Bike Sales)
-   5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins.
+   5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins
  **6. Data Visualization (Tableau)**
 
 ## 6. CONCLUSION:
@@ -139,9 +139,9 @@ _Limitations:_
 3.View the dashboard here: Tableau Public Link.
 
 **OVERVIEW USA BIKESALE DASHBOARD** 
-
+![Overall Dashboard](https://github.com/user-attachments/assets/fbc72c32-40a0-43a7-a1ff-5638a10f64be)
 **BEST vs WORST BEST PRODUCTS DASHBOARD** 
-
+![Products Dashboard](https://github.com/user-attachments/assets/b0df1826-16a5-44ff-80a3-92a795bb69e9)
 ## 8. USING SQL QUERIES:
 
 ```sql
@@ -158,6 +158,10 @@ SELECT *
 FROM Dupicates_ETC
 WHERE row_num >1;
 -- (no dulicates)
+
+
+
+
 
 -- 2. STANDARDIZE DATA
 -- CHANGE THE `DATE` DATA
