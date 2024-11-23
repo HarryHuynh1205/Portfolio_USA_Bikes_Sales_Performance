@@ -93,14 +93,14 @@ In the initial data preparation phase, we performed the following tasks:
 
 **3.3 Data Analysis**
 Include some interesting code/features worked with in **MySQL**:
-   1. SELECT * FROM table 1WHERE cond = 2;
-   2. SELECT * FROM table 1WHERE cond = 2 GROUP BY column1 ORDER BY column2
-   3. Window_ETC:
+   1. **SELECT** * **FROM** table 1 **WHERE** cond = 2;
+   2. **SELECT** * **FROM** table 1 **WHERE** cond = 2 **GROUP BY** column1 **ORDER BY** column2
+   3. **Window_ETC**:
       + ROW_NUMBER()
       + RANK()
      
 ## 4. ANALYSIS vs INSIGHTS:
-Key Insights:
+**Key Insights:**
    1. The Bike Sales Performance had been fluctuated and decreased lightly during the last decade, with a noticeable peak during the summer season and December.
    2. People from 35 to 63 years old were the main customers, particularly Men.
    3. Male customers make up a larger proportion of purchases, but female customers show higher average spending.
@@ -109,11 +109,11 @@ Key Insights:
 
 ## 5. VISUALIZATIONS:
 The Tableau dashboard includes:
-   1. A Regional Map visualizing sales performance by states.
-   2. The two Bar Charts showing age groups and gender contributions
-   3. A Line Chart comparing total product category profits per month.
-   4. A Pie Chart showing the highest detailed revenue of Category and its sub-category (Bike Sales)
-   5. The Six of Bar Charts demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins.
+   1. A **Regional Map** visualizing sales performance by states.
+   2. The _two_ **Bar Charts** showing age groups and gender contributions
+   3. A **Line Chart** comparing total product category profits per month.
+   4. A **Pie Chart** showing the highest detailed revenue of Category and its sub-category (Bike Sales)
+   5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins.
  **6. Data Visualization (Tableau)**
 
 ## 6. CONCLUSION:
