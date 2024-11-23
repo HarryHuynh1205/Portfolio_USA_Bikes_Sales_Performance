@@ -30,10 +30,11 @@ The dataset provides a detailed view of sales performance in the USA, offering i
 **Dataset**
 The dataset contained one CSV Excel file with the following theme columns: 
 **[USA_BikeSales_Data_Edited.csv](https://github.com/user-attachments/files/17879001/USA_BikeSales_Data_Edited.csv)**:
-   **Customer Demographics**: Customer Age, Age Group, Gender, Country and State.
-   **Product Details**: Product Category, Order Quantity, Unit Cost, Unit Price, Size, Material, Color, Warranty, Manufacturer, Discount and Eco Friendly,
-   **Sales Metrics**: Revenue, Cost and Profit.
-   **Delivery**: Rating, Shipping Weight, Delivery Time, Shipping Cost, Shipping Company, Shipping Type, Return Policy and Insurance.
+
+   1. **Customer Demographics**: Customer Age, Age Group, Gender, Country and State.
+   2. **Product Details**: Product Category, Order Quantity, Unit Cost, Unit Price, Size, Material, Color, Warranty, Manufacturer, Discount and Eco Friendly,
+   3. **Sales Metrics**: Revenue, Cost and Profit.
+   4. **Delivery**: Rating, Shipping Weight, Delivery Time, Shipping Cost, Shipping Company, Shipping Type, Return Policy and Insurance.
 
 The data link source from Kaggle: **[Global BikeSales Data]((https://www.kaggle.com/datasets/hamedahmadinia/global-bike-sales-dataset-2013-2023))**
 
