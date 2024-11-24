@@ -203,7 +203,8 @@ MODIFY COLUMN `date` DATE;
 
 
 -- EXPLORATORY DATA ANALYSIS (EDA)
--- 1. OVERALL    
+-- 1. OVERALL INFORMATION
+
 -- 1.1 TOTAL STATES
 SELECT count(distinct state) As Num_States
 FROM bikesales_usa;
