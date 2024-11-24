@@ -130,7 +130,7 @@ The Tableau dashboard includes:
    3. A **Line Chart** comparing total product category profits per month.
    4. A **Pie Chart** showing the highest detailed revenue of Category and its sub-category (Bike Sales)
    5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins
-   6. **Data Visualization ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard)**
+   6. **Data Visualization ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard))**
       
 ## 6. CONCLUSION:
 
@@ -151,13 +151,15 @@ _Limitations:_
 
 ## 7. HOW TO ACCESS TO THE PROJECT:
 
-1.Download the dataset file from this repository: **[USA_BikeSales_Data_Edited.csv](https://github.com/user-attachments/files/17879001/USA_BikeSales_Data_Edited.csv)**
-2.Open the Tableau Packaged Workbook **([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard)** in Tableau Public.
-3.View the dashboard here: Tableau Public Link.
+   1.Download the dataset file from this repository: **[USA_BikeSales_Data_Edited.csv](https://github.com/user-attachments/files/17879001/USA_BikeSales_Data_Edited.csv)**
 
-**OVERVIEW USA BIKESALE DASHBOARD** 
+   2.Open the Tableau Packaged Workbook **([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard)** in Tableau Public.
+ 
+   3.View the dashboard here: Tableau Public Link.
+
+   **OVERVIEW USA BIKESALE DASHBOARD** 
 ![Overall Dashboard](https://github.com/user-attachments/assets/fbc72c32-40a0-43a7-a1ff-5638a10f64be)
-**BEST vs WORST BEST PRODUCTS DASHBOARD** 
+   **BEST vs WORST BEST PRODUCTS DASHBOARD** 
 ![Products Dashboard](https://github.com/user-attachments/assets/b0df1826-16a5-44ff-80a3-92a795bb69e9)
 
 ## 8. USING SQL QUERIES:
