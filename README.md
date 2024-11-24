@@ -130,7 +130,7 @@ The Tableau dashboard includes:
    3. A **Line Chart** comparing total product category profits per month.
    4. A **Pie Chart** showing the highest detailed revenue of Category and its sub-category (Bike Sales)
    5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins
-   6. **Data Visualization ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard))**
+   6. **_Data Visualization_ ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard))**
       
 ## 6. CONCLUSION:
 
@@ -177,7 +177,7 @@ WITH Dupicates_ETC AS (
 SELECT *
 FROM Dupicates_ETC
 WHERE row_num >1;
--- (no dulicates)
+-- no dulicates
 
 
 
