@@ -36,7 +36,7 @@ The dataset contained one CSV Excel file with the following theme columns:
    3. **Sales Metrics**: Revenue, Cost and Profit.
    4. **Delivery**: Rating, Shipping Weight, Delivery Time, Shipping Cost, Shipping Company, Shipping Type, Return Policy and Insurance.
 
-The data link source from Kaggle: **[Global BikeSales Data]((https://www.kaggle.com/datasets/hamedahmadinia/global-bike-sales-dataset-2013-2023))**
+The data link source from Kaggle: [Global BikeSales Data]((https://www.kaggle.com/datasets/hamedahmadinia/global-bike-sales-dataset-2013-2023))
 
 ## 3. SKILLS vs TOOLS:
 ### 3.1 Tools:
