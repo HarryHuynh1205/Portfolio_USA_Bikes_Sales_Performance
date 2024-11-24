@@ -54,40 +54,40 @@ In the initial data preparation phase, we performed the following tasks:
 **3.2.2 Exploratory Data Analysis:**
 **EDA** involved exploring the sales data to answer key questions, such as:
 
-**3.2.1. SALES PERFORMANCE**
+**3.2.2.1. SALES PERFORMANCE**
    1. Are there seasonal patterns in bike sales?
    2. What are the peak sales periods?
    3. Is there consistent year-over-year growth in revenue or sales volume, especially in COVID-19?
    4. Which states have the highest sales performance?
    5. Which products or product lines have the highest profit margins?
 
-**3.2.2. CUSTOMER DEMOGRAPHICS**
+**3.2.2.2. CUSTOMER DEMOGRAPHICS**
    1. Who was more likely to buy bikes, male or female? 
    2. Which age groups?
    3. Which states were they?
     
-**3.2.3. PRODUCT CATEGORY**
+**3.2.2.3. PRODUCT CATEGORY**
    1. Which product category was top seller?
    2. Which sub-category was the top1 and the top2?
    3. What kinds of sub-categories did male or female feel interested in?
     
-**3.2.4. SIZE, COLOR and MATERIALS**
+**3.2.2.4. SIZE, COLOR and MATERIALS**
    1. What was the factor the customers usually chose best generally in USA?
    2. What was the factor chosen the most per state?
 
-**3.2.5. WARRANTY vs SUSTAINABILITY**
+**3.2.2.5. WARRANTY vs SUSTAINABILITY**
    1. Did the customers care much about the warranty? Which one did they choose best?
    2. Did the customer focus on the sustainability?
 
-**3.2.6. DELIVERY PROCESS**
+**3.2.2.6. DELIVERY PROCESS**
    1. Which Shipping_Company was chosen most?
    2. Which Shipping_Type was selected best? 
 
-**3.2.7. RATING**
+**3.2.2.7. RATING**
    1. Which Shipping_Type and Shipping_Company got the lowest-satisfied rate?
    2. Any correlation between Rating and Shipping_Type or Shipping_Company?
 
-**3.2.8. DISCOUNTS**
+**3.2.2.8. DISCOUNTS**
    1. How many discounts types?
    2. Did people tend to buy Bikes with the highest discounts?
 
@@ -95,7 +95,7 @@ In the initial data preparation phase, we performed the following tasks:
 Include some interesting code/features worked with in **MySQL**:
    1. **SELECT** * **FROM** table 1 **WHERE** cond = 2;
    2. **SELECT** * **FROM** table 1 **WHERE** cond = 2 **GROUP BY** column1 **ORDER BY** column2
-   3. **Window_ETC**:
+   3. **WINDOW_ETC**:
       + ROW_NUMBER()
       + RANK()
      
@@ -114,8 +114,8 @@ The Tableau dashboard includes:
    3. A **Line Chart** comparing total product category profits per month.
    4. A **Pie Chart** showing the highest detailed revenue of Category and its sub-category (Bike Sales)
    5. The **Six of Bar Charts** demonstrating the Best and Lowest Bikes by Revenue, Profit and Profit Margins
- **6. Data Visualization (Tableau)**
-
+ **6. Data Visualization ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard)**
+      
 ## 6. CONCLUSION:
 The project identified adults aged  35 to 63 years old as the top contributors to sales figures, with Road Bikes being the most revenuable product category. Sales performance varied across USA states, with the West leading in revenue generation.
 
@@ -142,6 +142,7 @@ _Limitations:_
 ![Overall Dashboard](https://github.com/user-attachments/assets/fbc72c32-40a0-43a7-a1ff-5638a10f64be)
 **BEST vs WORST BEST PRODUCTS DASHBOARD** 
 ![Products Dashboard](https://github.com/user-attachments/assets/b0df1826-16a5-44ff-80a3-92a795bb69e9)
+
 ## 8. USING SQL QUERIES:
 
 ```sql
