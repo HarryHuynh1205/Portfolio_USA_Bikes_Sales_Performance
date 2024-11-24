@@ -55,42 +55,42 @@ In the initial data preparation phase, we performed the following tasks:
 **3.2.2 Exploratory Data Analysis:**
 **EDA** involved exploring the sales data to answer key questions, such as:
 
-**3.2.2.1. SALES PERFORMANCE**
-   1. Are there seasonal patterns in bike sales?
-   2. What are the peak sales periods?
-   3. Is there consistent year-over-year growth in revenue or sales volume, especially in COVID-19?
-   4. Which states have the highest sales performance?
-   5. Which products or product lines have the highest profit margins?
+   **3.2.2.1 SALES PERFORMANCE**
+      1. Are there seasonal patterns in bike sales?
+      2. What are the peak sales periods?
+      3. Is there consistent year-over-year growth in revenue or sales volume, especially in COVID-19?
+      4. Which states have the highest sales performance?
+      5. Which products or product lines have the highest profit margins?
 
-**3.2.2.2. CUSTOMER DEMOGRAPHICS**
-   1. Who was more likely to buy bikes, male or female? 
-   2. Which age groups?
-   3. Which states were they?
+   **3.2.2.2 CUSTOMER DEMOGRAPHICS**
+      1. Who was more likely to buy bikes, male or female? 
+      2. Which age groups?
+      3. Which states were they?
     
-**3.2.2.3. PRODUCT CATEGORY**
-   1. Which product category was top seller?
-   2. Which sub-category was the top1 and the top2?
-   3. What kinds of sub-categories did male or female feel interested in?
+   **3.2.2.3 PRODUCT CATEGORY**
+      1. Which product category was top seller?
+      2. Which sub-category was the top1 and the top2?
+      3. What kinds of sub-categories did male or female feel interested in?
     
-**3.2.2.4. SIZE, COLOR and MATERIALS**
-   1. What was the factor the customers usually chose best generally in USA?
-   2. What was the factor chosen the most per state?
+   **3.2.2.4 SIZE, COLOR and MATERIALS**
+      1. What was the factor the customers usually chose best generally in USA?
+      2. What was the factor chosen the most per state?
 
-**3.2.2.5. WARRANTY vs SUSTAINABILITY**
-   1. Did the customers care much about the warranty? Which one did they choose best?
-   2. Did the customer focus on the sustainability?
+   **3.2.2.5 WARRANTY vs SUSTAINABILITY**
+      1. Did the customers care much about the warranty? Which one did they choose best?
+      2. Did the customer focus on the sustainability?
 
-**3.2.2.6. DELIVERY PROCESS**
-   1. Which Shipping_Company was chosen most?
-   2. Which Shipping_Type was selected best? 
+   **3.2.2.6 DELIVERY PROCESS**
+      1. Which Shipping_Company was chosen most?
+      2. Which Shipping_Type was selected best? 
 
-**3.2.2.7. RATING**
-   1. Which Shipping_Type and Shipping_Company got the lowest-satisfied rate?
-   2. Any correlation between Rating and Shipping_Type or Shipping_Company?
+   **3.2.2.7 RATING**
+      1. Which Shipping_Type and Shipping_Company got the lowest-satisfied rate?
+      2. Any correlation between Rating and Shipping_Type or Shipping_Company?
 
-**3.2.2.8. DISCOUNTS**
-   1. How many discounts types?
-   2. Did people tend to buy Bikes with the highest discounts?
+   **3.2.2.8 DISCOUNTS**
+      1. How many discounts types?
+      2. Did people tend to buy Bikes with the highest discounts?
 
 **3.3 Data Analysis**
 Include some interesting code/features worked with in **MySQL**:
@@ -102,6 +102,7 @@ Include some interesting code/features worked with in **MySQL**:
      
 ## 4. ANALYSIS vs INSIGHTS:
 **Key Insights:**
+
    1. The Bike Sales Performance had been fluctuated and decreased lightly during the last decade, with a noticeable peak during the summer season and December.
    2. People from 35 to 63 years old were the main customers, particularly Men.
    3. Male customers make up a larger proportion of purchases, but female customers show higher average spending.
@@ -110,6 +111,7 @@ Include some interesting code/features worked with in **MySQL**:
 
 ## 5. VISUALIZATIONS:
 The Tableau dashboard includes:
+
    1. A **Regional Map** visualizing sales performance by states.
    2. The _two_ **Bar Charts** showing age groups and gender contributions
    3. A **Line Chart** comparing total product category profits per month.
@@ -118,6 +120,7 @@ The Tableau dashboard includes:
  **6. Data Visualization ([USA_BikeSales_Dashboard.twb](https://public.tableau.com/app/profile/harry.huynh/viz/USA_BikeSales/OverallDashboard)**
       
 ## 6. CONCLUSION:
+
 The project identified adults aged  35 to 63 years old as the top contributors to sales figures, with Road Bikes being the most revenuable product category. Sales performance varied across USA states, with the West leading in revenue generation.
 
 These findings provide a clear direction for marketing and product strategy. Focusing on Road Bikes and Mountain Bike which is potential and targeting the 35-63 and 25-34 age groups respectively that can drive sales growth. Regional analysis suggests that expanding inventory and marketing efforts in the West could yield higher returns.
@@ -159,7 +162,7 @@ WITH Dupicates_ETC AS (
 SELECT *
 FROM Dupicates_ETC
 WHERE row_num >1;
--- (no dulicates)
+_-- (no dulicates)_
 
 
 
