@@ -23,10 +23,10 @@ The dataset provides a detailed view of sales performance in the USA, offering i
 ## 2. KEY QUESTIONS:
 **Key Questions**
 
-   1.Which age group contributed the most to bike sales?
-   2.Who tended to buy Bikes more, Men or Women?
-   3.What was the revenue distribution by states?
-   4.What product categories and Sub-category were most profitable?
+   1. Which age group contributed the most to bike sales?
+   2. Who tended to buy Bikes more, Men or Women?
+   3. What was the revenue distribution by states?
+   4. What product categories and Sub-category were most profitable?
 
 **Dataset**
 The dataset contained one CSV Excel file with the following theme columns: 
