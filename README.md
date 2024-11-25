@@ -163,10 +163,8 @@ _Limitations:_
 ## 8. USING SQL QUERIES:
 
 ```sql
-      SELECT *
-      FROM bikesales_usa;
 
--- 1. Checking Duplicates
+-- 1. CHECKING DUPLICATES
    WITH Dupicates_ETC AS (
          SELECT `date`,
                  ROW_NUMBER () OVER (PARTITION BY `date`, customer_age, Age_group, customer_gender, Country, State, Product_category, Product, Order_quantity, Unit_cost, Unit_price, Profit, 
@@ -178,8 +176,12 @@ _Limitations:_
       WHERE row_num >1;
 -- no dulicates
 
--- 2. Standardize Data
--- 2.1 Change the DATE data
+
+
+
+
+-- 2. STANDARDIZE DATA
+-- 2.1 CHANGE THE `DATE` DATA
       SELECT *
       FROM bikesales_usa;
 
@@ -194,41 +196,47 @@ _Limitations:_
       MODIFY COLUMN `date` DATE;
 
 
+
+
+
+
 -- EXPLORATORY DATA ANALYSIS (EDA)
--- 1. OVERALL    
--- 1.1 Total States
+-- 1. OVERALL INFORMATION    
+-- 1.1 TOTAL STATES
       SELECT count(distinct state) As Num_States
       FROM bikesales_usa;
 
--- 1.2 Total Quantity
+-- 1.2 TOTAL QUANTITY
       SELECT Sum(Order_Quantity) AS Total_Quantity
       FROM bikesales_usa;
 
--- 1.3 Total Products
+-- 1.3 TOTAL PRODUCTS
       SELECT count( distinct Product) AS Products
       FROM bikesales_usa;
 
--- 1.4 Total Revenue
+-- 1.4 TOTAL REVENUE
       SELECT sum(Revenue) AS Total_Revenue
       FROM bikesales_usa;
 
--- 1.5 Total Profit
+-- 1.5 TOTAL PROFIT
       SELECT sum(profit) AS Total_Profits
       FROM bikesales_usa;
 
--- 1.6 Total Cost
+-- 1.6 TOTL COST
       SELECT sum(cost) AS Total_Cost
       FROM bikesales_usa;
 
--- 1.7 Total Orders
+-- 1.7 TOTAL ORDERS
       SELECT count(`date`) AS Num_Orders
       FROM bikesales_usa;
 
 
 
--- (25/11)
+
+
+
 -- 3.2.2.1 SALES PERFORMANCE
--- 1. Are there seasonal patterns in bike sales?
+-- 1. ARE THERE SEASONAL PATTERNS IN BIKE SALES?
       SELECT SUBSTRING(`date`,6,2) AS `month`,
              sum(revenue) AS Total_Revenue
       FROM bikesales_usa
@@ -236,7 +244,8 @@ _Limitations:_
       ORDER BY sum(revenue) DESC;
 -- Bikers tend to buy Bikes during Summer season and December
 
--- 2. 3. Is there consistent year-over-year growth in revenue or sales volume, especially in COVID-19?
+
+-- 2.IS THERE CONSISTENT YEAR-OVER-YEAR GROWTH IN REVENUE OR SALES VOLUME, ESPECIALLY DURING COVID-19?
       SELECT YEAR(`date`) AS `Year`,
              sum(revenue) AS Total_Revenue, 
              RANK() OVER (ORDER BY sum(revenue) DESC)
@@ -245,7 +254,8 @@ _Limitations:_
       GROUP BY YEAR(`date`) ;
 -- Covid-19 period, the number of bikes sold lightly decreased compared to that of other years, which ranked the year of 2021, 2022 and 2023 at the 8th, 9th and 10th, respectively.
 
--- 4. Which states have the highest sales performance?
+
+-- 4. WHICH STATES HAVE THE HIGHEST SALES PERFORMANCE?
       SELECT state,
              SUM(revenue) AS Total_revenue,
              SUM(profit) AS Total_Profit
@@ -255,7 +265,8 @@ _Limitations:_
                SUM(profit) DESC; 
 -- to find out the top 3 states using Bikes
 
--- 5. Which products or product lines have the highest profit margins?
+
+-- 5. WHICH PRODUCTS OR PRODUCT LINES HAVE THE HIGHEST PROFIT MARGINS?
 -- Profit Margin (% revenue, profit per product)
       SELECT  Product_Category,
               sub_category,
@@ -271,8 +282,12 @@ _Limitations:_
 
 
 
+
+
+
+
 -- 3.2.2.2 CUSTOMER DEMOGRAPHICS
--- 1. Who was more likely to buy bikes, male or female? 
+-- 1. WHO WAS MORE LIKELY TO BUY BIKES, MALE OR FEMALE? 
       SELECT Customer_Gender,
              SUM(revenue)  AS Total_revenue
       FROM bikesales_usa
@@ -280,7 +295,7 @@ _Limitations:_
       ORDER BY 2 DESC;
 -- to understand the gender tendency using Bikes
 
--- 2. Which age groups?
+-- 2. WHICH AGE GROUPS?
       SELECT Age_Group,
              SUM(revenue)  AS Total_revenue
       FROM bikesales_usa
@@ -289,8 +304,12 @@ _Limitations:_
 -- to find out which ages or age groups were our potential customers (for suitable promotions and marketing)
 
 
+
+
+
+
 -- 3.2.2.3 PRODUCT CATEGORY
--- 1. Which product category was best seller?
+-- 1. WHICH PRODUCT CATEGORY WAS BEST SELLER?
       SELECT Product_Category,
              SUM(revenue) AS Total_revenue
       FROM bikesales_usa
@@ -307,8 +326,9 @@ _Limitations:_
                Sub_Category
       ORDER BY 3 DESC;
 
--- 2. Which sub-category was the top1 and the top2?
--- Revenue vs Sub-Category
+
+-- 2. WHICH SUB-CATEGORY WAS THE TOP1 AND THE TOP2?
+-- REVENUE AND SUB-CATEGORY
       SELECT Product_Category,
              Sub_Category,
              SUM(revenue) AS Total_revenue
@@ -317,7 +337,7 @@ _Limitations:_
               Sub_Category
       ORDER BY 3 DESC; -- to make sure that BIKES was the best, which should make sense with its Sub-category
 
--- Revenue vs Products
+-- REVENUE VS PRODUCTS
       SELECT Product,
              Sub_Category,
              SUM(revenue) AS Total_revenue
@@ -328,8 +348,9 @@ _Limitations:_
       ORDER BY 3 DESC; -
 - BIKES sector was dominant, I just want to understand more about the Top 2 Bestseller Sub-category (Helmets and Fenders)
 
--- 3. What kinds of sub-categories did male or female feel interested in?
--- Genders (BIKE CATEGORY)
+
+-- 3. WHAT KINDS OF SUB-CATEGORIES DID MALE OR FEMALE FEEL INTERESTED IN?
+-- GENDERS (BIKE CATEGORY)
   WITH Gender_Prod_ETC AS (
             SELECT Customer_Gender,
                    Product_Category,
@@ -349,12 +370,17 @@ _Limitations:_
 -- Meanwhile, FEMALE would love to choose Clothing (Jerseys and Shorts) 
 
 
--- 3.2.2.4 SIZE, COLOR and MATERIALS
+
+
+
+
+-- 3.2.2.4 SIZE, COLOR AND MATERIALS
       SELECT size,
              SUM(revenue) AS Total_revenue
       FROM bikesales_usa
       GROUP BY size
       ORDER BY SUM(revenue) DESC;
+
 
       SELECT color,
              SUM(revenue) AS Total_revenue
@@ -362,13 +388,15 @@ _Limitations:_
       GROUP BY color
       ORDER BY SUM(revenue) DESC;
 
+
       SELECT material,
              SUM(revenue) AS Total_revenue
       FROM bikesales_usa
       GROUP BY material
       ORDER BY SUM(revenue) DESC;
 
--- 1. What were the factor the customers usually chose best generally in USA?
+
+-- 1. WHAT WERE THE FACTOR THE CUSTOMERS USUALLY CHOSE BEST GENERALLY IN USA?
    WITH size_color_material_ETC AS (
             SELECT size,
                    color,
@@ -386,7 +414,8 @@ _Limitations:_
       WHERE size_color_material_row =1; 
 -- I want to understand the favourite color which was chose by each Sub-Category, then update to store and prepare products for inventories
 
--- 2. What were the factor chosen the most per state?
+
+-- 2. WHAT WERE THE FACTOR CHOSEN THE MOST PER STATE?
    WITH size_color_material_ETC AS (
             SELECT size,
                    color,
@@ -406,8 +435,12 @@ _Limitations:_
 
 
 
--- 3.2.2.5 WARRANTY vs SUSTAINABILITY
--- 1. Did the customers care much about the warranty? Which one did they choose best?
+
+
+
+
+-- 3.2.2.5 WARRANTY VS SUSTAINABILITY
+-- 1. DID THE CUSTOMERS CARE MUCH ABOUT THE WARRANTY? WHICH ONE DID THEY CHOOSE BEST?
       SELECT warranty,
              sum(revenue) AS Toatal_Revenue
       FROM bikesales_usa
@@ -415,13 +448,15 @@ _Limitations:_
       ORDER BY sum(revenue) DESC;
 -- They did not have a big gap in difference among 4 types of warranty. They chosen 2-year Warranty the most.
 
--- 2. Did the customer focus on the sustainability?
+
+-- 2. DID THE CUSTOMER FOCUS ON THE SUSTAINABILITY?
       SELECT Eco_Friendly,
              sum(revenue) AS Toatal_Revenue
       FROM bikesales_usa
       GROUP BY Eco_Friendly
       ORDER BY sum(revenue) DESC;
 -- No really, The customers did not take Sustainability criteria as their first priority.
+
 
       SELECT Manufacturer,
              sum(revenue) AS Toatal_Revenue
@@ -444,8 +479,13 @@ _Limitations:_
       WHERE war_eco_manu_sub_num =1;
 
 
+
+
+
+
+
 -- 3.2.2.6 DELIVERY PROCESS
--- 1. Which Shipping_Company was chosen most?
+-- 1. WHICH SHIPPING_COMPANY WAS CHOSEN MOST?
       SELECT Shipping_Company,
              sum(Shipping_Cost) AS Total_Shipping_Cost
       FROM bikesales_usa
@@ -453,13 +493,15 @@ _Limitations:_
       ORDER BY sum(Shipping_Cost) DESC; 
 -- to find the best Shipping Company (FedEx)
 
--- 2. Which Shipping_Type was selected best? 
+
+-- 2. WHICH SHIPPING_TYPE WAS SELECTED BEST? 
       SELECT  Shipping_Type,
              sum(Shipping_Cost) AS Total_Shipping_Cost
       FROM bikesales_usa
       GROUP BY Shipping_Type
       ORDER BY sum(Shipping_Cost) DESC; 
 -- Shipping_Type (Express and Same Day) were chosen most.
+
 
    WITH Ship_Types_Rate_ETC AS (
             SELECT Shipping_Company,
@@ -474,8 +516,12 @@ _Limitations:_
  -- The best Shipping_Company of each Type (Posti, GLS, UPS and FedEx)
 
 
+
+
+
+
 -- 3.2.2.7 RATING
--- 1. Which Shipping_Type and Shipping_Company got the low rates?
+-- 1. WHICH SHIPPING_TYPE AND SHIPPING_COMPANY GOT THE LOW RATES?
    WITH low_rate_ETC AS (
             SELECT Shipping_Company,
                    Shipping_Type,
@@ -490,7 +536,8 @@ _Limitations:_
       WHERE rate_row <=3; 
 -- The Shipping Companies got the most bad rating (DHL, FedEx, GLS, Posti and UPS)
 
--- 2. Any correlation between Rating and Shipping_Type or Shipping_Company?
+
+-- 2. ANY CORRELATION BETWEEN RATING AND SHIPPING_TYPE OR SHIPPING_COMPANY?
       SELECT Shipping_Company,
              rating,
              sum(Shipping_Cost) AS Total_Shipping_Cost
@@ -512,18 +559,22 @@ _Limitations:_
 -- We need to find out other factors to analyze together for this insights.
 
 
+
+
+
+
 -- 3.2.2.8 DISCOUNTS
--- 1. How many discounts types?
+-- 1. HOW MANY DISCOUNTS TYPES?
       SELECT distinct discount
       FROM bikesales_usa;
 -- Having 30 types of discounts (from 0 to 29)
 
--- 2. Did people tend to buy Bikes with the highest discounts?
+
+-- 2. DID PEOPLE TEND TO BUY BIKES WITH THE HIGHEST DISCOUNTS?
       SELECT discount,
              sum(revenue) AS Total_revenue
       FROM bikesales_usa
       GROUP BY discount
       ORDER BY sum(revenue) DESC; 
 -- Top 3 DISCOUNTS (15,18,11); however, the highest discount was 29.
-
 
